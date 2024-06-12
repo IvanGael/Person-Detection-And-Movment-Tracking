@@ -55,7 +55,7 @@ while cap.isOpened():
                     dx = abs(center_x - prev_x)
                     dy = abs(center_y - prev_y)
                     if dx > threshold or dy > threshold:
-                        cv2.putText(frame, 'Movement detected', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
+                        cv2.putText(frame, f'Mvt ({dx},{dy})', (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA)
                 
                 # Update previous coordinates
                 prev_x, prev_y = center_x, center_y
